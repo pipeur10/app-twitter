@@ -1,0 +1,33 @@
+<ion-view  hide-back-button="false" view-title="Profile">
+	<ion-content>
+			<div class="list list-insert">
+				<div class="item item-divider">
+					{{currentUser.firstName}} {{currentUser.lastName}}
+				</div>
+				<div class="item item-body">
+					<!-- <img src="htpp://placeholder.it/600x200" Alt="{{currentUser.firstName}} {{currentUser.lastName}} - Image"> -->
+					<img src="img/pipo.png" Alt="{{currentUser.firstName}} {{currentUser.lastName}} - Image">
+					
+				</div>
+				<div class="item item-divider">
+					Username
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-person"></i> {{currentUser.userName}}
+				</div>
+				<div class="item item-divider">
+					Email
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-email"></i> {{currentUser.email}}
+				</div>
+				<div class="item item-divider">
+					Mobile
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-telephone"></i> {{currentUser.phoneNumber}}
+				</div>
+			</div>
+	</ion-content>
+	
+</ion-view>

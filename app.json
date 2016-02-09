@@ -1,0 +1,7 @@
+{
+  "name": "Twitter",
+  "description": "A Twitter Clone App",
+  "repository": "https://github.com/pipeur10/app-twitter.git",
+  "logo": "http://ionicframework.com/img/ionic-logo-blog.png",
+  "keywords": ["ionic", "static"]
+}

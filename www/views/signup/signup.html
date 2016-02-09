@@ -1,0 +1,35 @@
+<ion-view view-title="Sign up" hide-back-button="false">
+	<ion-content>
+		<form name="formSignup">
+			<div class="list">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" ng-model="user.firstName" placeholder="First Name" ng-required="true">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last Name</span>
+					<input type="text" ng-model="user.lastName" placeholder="Last Name" ng-required="true">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email</span>
+					<input type="email" ng-model="user.email" placeholder="Email" ng-required="true">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Username</span>
+					<input type="text" ng-model="user.userName" placeholder="6 to 15 characters" ng-required="true" ng-minLength="6" ng-maxLength="15">
+				</label>
+				<label class="item item-input item-stacked-label" ng-required="true">
+					<span class="input-label">Password</span>
+					<input type="password" ng-model="user.password" placeholder="At least 6 characters" ng-required="true" ng-minLength="6" ng-maxLength="80">
+				</label>
+				<label class="item item-input item-stacked-label" ng-required="true">
+					<span class="input-label">Phone Number</span>
+					<input type="text" ng-model="user.phoneNumber" placeholder="6 to 20 characters" ng-required="true" ng-minLength="6" ng-maxLength="20">
+				</label>
+				<div class="item">
+					<button ng-click="saveUser()" class="button button-positive button-block" ng-disabled="formSignup.$invalid">Sign Up</button>
+				</div>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>

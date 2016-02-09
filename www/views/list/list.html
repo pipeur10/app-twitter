@@ -1,0 +1,29 @@
+<ion-view view-title="{{currentUser.firstName}} {{currentUser.lastName}}">
+	
+	<div class="bar bar-subheader bar-light">
+		<!-- <label class="item-input-wrapper">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="Search">
+			
+		</label> -->
+		<div class="button-bar">
+		<!-- ng-click="addTwit()" -->
+			<a href="#/add" class="button button-light" ><i class="icon ion-social-twitter"></i></a> 
+			<a href="#/profile" class="button button-light" ><i class="icon ion-person"></i></a>
+			<a href="#/welcome" class="button button-light" ><i class="icon ion-home"></i></a>
+		</div>
+	</div>
+	<ion-content class="has-subheader">
+	<ion-refresher on-refresh="doRefresh()"></ion-refresher>
+		<ion-list >
+			<ion-item ng-repeat="twit in twits" class="item-thumbnail-left item-text-wrap">
+					<img src="img/avatar2.jpg" alt="Photo">
+					<span class="item-note">{{ twit.formatedDate }}</span>
+					<!--<span class="item-note">{{twit.date | date:'short' }}</span> | date:'short' formatedDate-->
+
+					<h2>{{currentUser.userName}}</h2>
+					<p>{{twit.message}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

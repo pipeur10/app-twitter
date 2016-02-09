@@ -1,0 +1,20 @@
+<ion-view view-title="Login" hide-back-button="false">
+	<ion-content>
+		<form name="formLogin">
+			<div class="list">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Phone, email or username</span>
+					<input type="text" ng-model="autUser.identifier" ng-required="true">
+				</label>
+				<label class="item item-input item-stacked-label" ng-required="true">
+					<span class="input-label">Password</span>
+					<input type="password" ng-model="autUser.password" ng-required="true" ng-minLength="6" ng-maxLength="80">
+				</label>
+				
+				<div class="item">
+					<button ng-click="verifyUser()" class="button button-positive button-block" ng-disabled="formLogin.$invalid">Login</button>
+				</div>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>
